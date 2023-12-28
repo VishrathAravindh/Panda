@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>panda 🐼 maths</title>
+</head>
+
+<body>
+  <h1>Game</h1>
+  <h3>Guess the Number</h3>
+  <input id="checknumber">
+  <button onclick="check()">Check</button>
+  <p id="result">You are Right/Wrong</p>
+  <p id="score">Score=10</p>
+
+  <script>
+    var totalscore = 10;
+
+    function check() {
+      var z = document.getElementById("checknumber").value;
+      var y = Math.floor(Math.random() * 10);
+      var result = document.getElementById("result");
+      var score = document.getElementById("score");
+
+      if (z == y) {
+        result.textContent = "Right";
+        window.alert("You Won");
+      } else {
+        result.textContent = "Wrong";
+        totalscore = totalscore - 1;
+        score.textContent = "Score=" + totalscore;alert("You are wrong")
+      }
+    }
+  </script>
+
+  <h1>Calculator</h1>
+
+  <h3>Addition:</h3>
+  <input id="num1">
+  <input id="num2">
+  <button onclick="add()">ADD</button>
+
+  <script>
+    function add() {
+      var a = document.getElementById("num1").value;
+      var b = document.getElementById("num2").value;
+      var c = Number(a) + Number(b);
+      alert(c);
+    }
+  </script>
+
+  <h3>Square</h3>
+  <input type="text" id="squareNo" placeholder="enter your question">
+  <button onclick="calc()">Search</button>
+
+  <script>
+    function calc() {
+      var a = document.getElementById("squareNo").value;
+      alert(a * a);
+    }
+  </script>
+
+  <h3>Subtraction:</h3>
+  <input id="num5">
+  <input id="num6">
+  <button onclick="sub()">Subtract</button>
+
+  <script>
+    function sub() {
+      var h = document.getElementById("num5").value;
+      var i = document.getElementById("num6").value;
+      var j = Number(h) - Number(i);
+      alert(j);
+    }
+  </script>
+
+  <h3>Multiplication:</h3>
+  <input id="num3">
+  <input id="num4">
+  <button onclick="mul()">Multiply</button>
+
+  <script>
+    function mul() {
+      var e = document.getElementById("num3").value;
+      var f = document.getElementById("num4").value;
+      var g = Number(e) * Number(f);
+      alert(g);
+    }
+  </script>
+  <style>
+    div{background-color:black;color:white;height:100px;width:100px;margin-left:400px;border-color:black;border-style:solid;border-width:2; animation :vishrath ;
+ animation-duration:10s;animation-iteration-count:100;}
+    @keyframes vishrath{0%{transform:translatex(360px)}
+    50%{transform:translateY(3660px);}}
+      100%{transform:translateY(3660px);}}
+   
+  </style>
+<div>vishrath Aravindh</div>
+</body>
+
+</html>
